@@ -1,0 +1,95 @@
+i {
+    color: #fff
+}
+
+.background {
+    transition: all 0.5s ease-in-out;
+}
+
+.card-text {
+    animation: clip .3s cubic-bezier(.25, .46, .45, .94) both 5
+}
+
+#text, #author {
+    color: transparent;
+}
+
+#quote-box {
+    position: relative;
+}
+
+.type-wrap{
+    position: absolute;
+    top: 16px;
+    margin-right: 16px;
+} 
+
+.fa.fa-quote-left,
+.card-text,
+#text, #author {
+    font-size : 25px;
+}
+
+.card-text,
+#text {
+    white-space: 'pre-wrap';
+}
+
+.animated-background i {
+    color: transparent;
+}
+
+.text-area {
+    margin-left: -5px;
+}
+
+.animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    color: transparent;
+    position: relative;
+    height: fit-content;
+    white-space: nowrap;
+}
+
+@keyframes placeHolderShimmer{
+    0%{ 
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+button:active, button:active:focus, 
+button:visited {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+@keyframes clip {
+    0% {
+		transform: translate(0)
+	}
+	20% {
+		transform: translate(-5px, 5px)
+	}
+	40% {
+		transform: translate(-5px, -5px)
+	}
+	60% {
+		transform: translate(5px, 5px)
+	}
+	80% {
+		transform: translate(5px, -5px)
+	}
+	to {
+		transform: translate(0)
+	}
+}
